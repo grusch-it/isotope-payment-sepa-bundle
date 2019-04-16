@@ -1,0 +1,45 @@
+{
+    "name" : "grusch-it/isotope-payment-sepa-bundle",
+    "description" : "SEPA payment module for contao isotope extension.",
+    "keywords": ["contao", "bundle", "isotope"],
+    "type" : "contao-bundle",
+    "license" : "LGPL-3.0+",
+    "authors":[
+        {
+            "name": "Michael Gruschwitz",
+            "email": "info@grusch-it.de"
+        }
+    ],
+    "require" : {
+        "php" : "^5.6|^7.0",
+        "ext-bcmath": "*",
+        "contao/core-bundle" : "~4.1",
+        "isotope/isotope-core": "~2.5.0"
+    },
+    "require-dev" : {
+        "contao/manager-plugin" : "^2.0"
+    },
+    "conflict" : {
+        "contao/manager-plugin" : "<2.0 || >=3.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Gruschit\\Contao\\Isotope\\Payment\\Sepa\\" : "src/"
+        },
+        "classmap" : [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap" : [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    },
+    "extra" : {
+        "branch-alias": {
+            "dev-develop": "1.0.x-dev"
+        },
+        "contao-manager-plugin" : "Gruschit\\Contao\\Isotope\\Payment\\Sepa\\ContaoManager\\Plugin"
+    }
+}
