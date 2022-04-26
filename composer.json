@@ -38,5 +38,6 @@
             "dev-develop": "1.0.x-dev"
         },
         "contao-manager-plugin" : "Gruschit\\Contao\\Isotope\\Payment\\Sepa\\ContaoManager\\Plugin"
-    }
+    },
+    "version": "dev-master"
 }
