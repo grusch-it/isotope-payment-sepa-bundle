@@ -9,7 +9,6 @@
 
 namespace Gruschit\Contao\Isotope\Payment\Sepa;
 
-use Contao\Encryption;
 use Serializable;
 
 /**
@@ -78,7 +77,7 @@ class SepaPaymentBag implements Serializable
 			}
 
 			// encrypted value
-			if (isset($arrField['eval']) && isset($arrField['eval']['encrypt']) && $arrField['eval']['encrypt'] == true)
+			if (isset($arrField['eval']) && isset($arrField['eval']['encrypt_me']) && $arrField['eval']['encrypt_me'] == true)
 			{
 				$this->arrData[$strKey] = Encryption::encrypt($strValue);
 				continue;
@@ -143,7 +142,7 @@ class SepaPaymentBag implements Serializable
 			}
 
 			// decrypt value
-			if (isset($arrField['eval']) && isset($arrField['eval']['encrypt']) && $arrField['eval']['encrypt'] == true)
+			if (isset($arrField['eval']) && isset($arrField['eval']['encrypt_me']) && $arrField['eval']['encrypt_me'] == true)
 			{
 				return Encryption::decrypt($this->arrData[$strKey]);
 			}

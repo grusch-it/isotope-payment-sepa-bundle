@@ -9,7 +9,6 @@
 
 namespace Gruschit\Contao\Isotope\Payment\Sepa;
 
-use Contao\Encryption;
 use Contao\Frontend;
 use Contao\Widget;
 use Isotope\Module\Checkout;
@@ -275,7 +274,12 @@ class SepaCheckoutForm extends Frontend
 			(
 				'label'     => &$GLOBALS['TL_LANG']['tl_iso_payment']['sepa_iban'],
 				'inputType' => 'text',
-				'eval'      => array('mandatory' => true, 'rgxp' => 'sepa_iban', 'encrypt' => true),
+				'eval'      => array(
+					'mandatory' => true, 
+					'rgxp' => 'sepa_iban', 
+					// costum var for use own encryption
+					'encrypt_me' => true
+				),
 			),
 			'sepa_bic'    => array
 			(
