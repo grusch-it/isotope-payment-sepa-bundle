@@ -6,7 +6,7 @@ namespace Gruschit\Contao\Isotope\Payment\Sepa;
 
 class Encryption
 {
-    const KEY = '12345678901234567890123456789012';
+    const KEY = 'KJDgFBeGZHlqA0wvdFjZomVitSPDbEwZ';
 
     public function encrypt(string $data): string
     {
