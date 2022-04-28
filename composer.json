@@ -1,5 +1,5 @@
 {
-    "name" : "grusch-it/isotope-payment-sepa-bundle",
+    "name" : "albirs/isotope-payment-sepa-bundle",
     "description" : "SEPA payment module for contao isotope extension.",
     "keywords": ["contao", "bundle", "isotope"],
     "type" : "contao-bundle",
