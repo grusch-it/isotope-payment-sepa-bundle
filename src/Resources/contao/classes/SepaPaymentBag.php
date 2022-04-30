@@ -9,7 +9,6 @@
 
 namespace Gruschit\Contao\Isotope\Payment\Sepa;
 
-use Contao\Encryption;
 use Serializable;
 
 /**

@@ -9,7 +9,6 @@
 
 namespace Gruschit\Contao\Isotope\Payment\Sepa;
 
-use Contao\Encryption;
 use Contao\Frontend;
 use Contao\Widget;
 use Isotope\Module\Checkout;
