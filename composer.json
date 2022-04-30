@@ -13,8 +13,8 @@
     "require" : {
         "php": "^7.2 || ^8.0",
         "ext-bcmath": "*",
-        "isotope/isotope-core": "~2.5.0",
         "contao/core-bundle" : "^4.9",
+        "isotope/isotope-core": "^2.8.0",
         "phpseclib/mcrypt_compat": "^2.0"
     },
     "require-dev" : {
