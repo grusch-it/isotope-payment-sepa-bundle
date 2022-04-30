@@ -35,7 +35,7 @@ class SepaPayment extends Payment implements IsotopePayment
 	 * @param   \Module $objModule The checkout module instance
 	 * @return  bool
 	 */
-	public function processPayment(IsotopeProductCollection $objOrder, \Module $objModule)
+	public function processPayment(IsotopeProductCollection $objOrder, \Contao\Module $objModule)
 	{
 		if ( ! $objOrder instanceof Order)
 		{
@@ -66,7 +66,7 @@ class SepaPayment extends Payment implements IsotopePayment
 	 * @param \Module $objModule The checkout module instance
 	 * @return bool|string
 	 */
-	public function checkoutForm(IsotopeProductCollection $objOrder, \Module $objModule)
+	public function checkoutForm(IsotopeProductCollection $objOrder, \Contao\Module $objModule)
 	{
 		$objForm = new SepaCheckoutForm($objModule->tableless);
 
