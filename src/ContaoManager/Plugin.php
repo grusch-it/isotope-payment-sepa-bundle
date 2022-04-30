@@ -24,7 +24,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(AppBundle::class)
-                        ->setLoadAfter([ ContaoCoreBundle::class ])
+                        ->setLoadAfter([ ContaoCoreBundle::class, 'isotope' ])
                         ->setReplace([ 'isotope-sepa' ]),
         ];
     }
