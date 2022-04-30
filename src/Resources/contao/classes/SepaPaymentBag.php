@@ -179,7 +179,6 @@ class SepaPaymentBag implements Serializable
 	 */
 	public function unserialize($serialized)
 	{
-		$this->arrData = deserialize($serialized, true);
+		$this->arrData = \Contao\StringUtil::deserialize($serialized, true);
 	}
-
 }
