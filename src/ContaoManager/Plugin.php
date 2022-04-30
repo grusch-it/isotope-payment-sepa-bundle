@@ -13,7 +13,7 @@ use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Gruschit\Contao\Isotope\Payment\Sepa\AppBundle;
+use Gruschit\Contao\Isotope\Payment\Sepa\IsotopePaymentSepaBundle;
 
 class Plugin implements BundlePluginInterface
 {
@@ -23,7 +23,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(AppBundle::class)
+            BundleConfig::create(IsotopePaymentSepaBundle::class)
                         ->setLoadAfter([ ContaoCoreBundle::class, 'isotope' ])
                         ->setReplace([ 'isotope-sepa' ]),
         ];

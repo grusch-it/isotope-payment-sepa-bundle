@@ -11,7 +11,7 @@ namespace Gruschit\Contao\Isotope\Payment\Sepa;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class AppBundle extends Bundle
+class IsotopePaymentSepaBundle extends Bundle
 {
 
 }
