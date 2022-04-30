@@ -42,5 +42,13 @@
             "dev-develop": "1.0.x-dev"
         },
         "contao-manager-plugin" : "Gruschit\\Contao\\Isotope\\Payment\\Sepa\\ContaoManager\\Plugin"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao/manager-plugin": true,
+            "contao-components/installer": true,
+            "contao-community-alliance/composer-plugin": true,
+            "ocramius/package-versions": true
+        }
     }
 }
