@@ -49,7 +49,7 @@ class SepaBackendInterface extends Frontend
 
 		$this->Template = new Template($this->strTemplate);
 		$this->Template->back = $GLOBALS['TL_LANG']['MSC']['backBT'];
-		$this->Template->backHref = ampersand(str_replace('&key=payment', '', Environment::get('request')));
+		$this->Template->backHref = \Contao\StringUtil::ampersand(str_replace('&key=payment', '', Environment::get('request')));
 		$this->Template->data = $objPaymentBag->all();
 		$this->Template->name = $objPayment->name;
 	}
