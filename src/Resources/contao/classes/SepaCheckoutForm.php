@@ -138,7 +138,7 @@ class SepaCheckoutForm extends Frontend
 			if ($strName == 'sepa_iban' && ! $objWidget->hasErrors())
 			{
 				$strMasked = SepaPayment::maskIBAN($strValue);
-				$objWidget->value = $objWidget->encrypt ? \Gruschit\Contao\Isotope\Payment\Sepa\Encryption::encrypt($strMasked) : $strMasked;
+				$objWidget->value = $objWidget->encrypt_data ? \Gruschit\Contao\Isotope\Payment\Sepa\Encryption::encrypt($strMasked) : $strMasked;
 			}
 
 			if ($objWidget->hasErrors())
@@ -274,7 +274,7 @@ class SepaCheckoutForm extends Frontend
 			(
 				'label'     => &$GLOBALS['TL_LANG']['tl_iso_payment']['sepa_iban'],
 				'inputType' => 'text',
-				'eval'      => array('mandatory' => true, 'rgxp' => 'sepa_iban', 'encrypt' => true),
+				'eval'      => array('mandatory' => true, 'rgxp' => 'sepa_iban', 'encrypt_data' => true),
 			),
 			'sepa_bic'    => array
 			(
