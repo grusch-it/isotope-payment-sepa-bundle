@@ -138,7 +138,7 @@ class SepaCheckoutForm extends Frontend
 			if ($strName == 'sepa_iban' && ! $objWidget->hasErrors())
 			{
 				$strMasked = SepaPayment::maskIBAN($strValue);
-				$objWidget->value = $objWidget->encrypt ? Encryption::encrypt($strMasked) : $strMasked;
+				$objWidget->value = $objWidget->encrypt ? \Gruschit\Contao\Isotope\Payment\Sepa\Encryption::encrypt($strMasked) : $strMasked;
 			}
 
 			if ($objWidget->hasErrors())

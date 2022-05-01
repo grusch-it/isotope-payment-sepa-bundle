@@ -79,7 +79,7 @@ class SepaPaymentBag implements Serializable
 			// encrypted value
 			if (isset($arrField['eval']) && isset($arrField['eval']['encrypt']) && $arrField['eval']['encrypt'] == true)
 			{
-				$this->arrData[$strKey] = Encryption::encrypt($strValue);
+				$this->arrData[$strKey] = \Gruschit\Contao\Isotope\Payment\Sepa\Encryption::encrypt($strValue);
 				continue;
 			}
 
@@ -144,7 +144,7 @@ class SepaPaymentBag implements Serializable
 			// decrypt value
 			if (isset($arrField['eval']) && isset($arrField['eval']['encrypt']) && $arrField['eval']['encrypt'] == true)
 			{
-				return Encryption::decrypt($this->arrData[$strKey]);
+				return \Gruschit\Contao\Isotope\Payment\Sepa\Encryption::decrypt($this->arrData[$strKey]);
 			}
 
 			return $this->arrData[$strKey];
